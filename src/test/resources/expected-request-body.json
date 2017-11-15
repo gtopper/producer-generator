@@ -1,8 +1,5 @@
 {
   "Item": {
-    "timestamp": {
-      "N": "1510046192422"
-    },
     "driver_id": {
       "N": "123"
     },
@@ -268,5 +265,5 @@
       "S": null
     }
   },
-  "ConditionExpression": "not(exists(timestamp)) or timestamp < 1510046192422"
+  "ConditionExpression": "not(exists(updated_at)) or updated_at < \"2017-11-07 09:16:32\""
 }
