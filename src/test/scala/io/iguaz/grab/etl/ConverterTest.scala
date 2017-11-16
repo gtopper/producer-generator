@@ -8,12 +8,14 @@ import org.scalatest.{FunSpec, Matchers}
 
 class ConverterTest extends FunSpec with Matchers {
 
+  private implicit val formats = org.json4s.DefaultFormats
+
   it("Sample event") {
     val event = fromResource("sample-event.json").getLines().mkString("")
-    val expected = fromResource("expected-request-body.json").getLines().mkString("")
-    val (rowKey, json) = Converter(event)
-    rowKey shouldBe "123"
-    json shouldBe parse(expected)
+    val expected = fromResource("expected-row-data.json").getLines().mkString("")
+    val row = Converter(event)
+    row.getKey shouldBe "123"
+    row.getFields shouldBe parse(expected).extract[Map[String, Any]]
   }
 
   /** From Scala 2.12 [[scala.io.Source]]. */
