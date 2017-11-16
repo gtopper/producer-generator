@@ -14,11 +14,7 @@ import io.iguaz.v3io.kv.{KeyValueOperations, OverwriteMode, UpdateEntry}
 object Main {
 
   private val config = ConfigFactory.load()
-  private val host = config.getString("host")
-  private val port = config.getInt("port")
   private val table = config.getString("table")
-  private val computeParallelism = config.getInt("compute-parallelism")
-  private val printPeriod = config.getInt("print-period")
 
   val timeAttribute = "updated_at"
 
