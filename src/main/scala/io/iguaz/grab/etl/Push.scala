@@ -3,6 +3,9 @@ package io.iguaz.grab.etl
 import java.nio.file.Paths
 import java.util.Properties
 
+import scala.concurrent.Await
+import scala.concurrent.duration.Duration
+
 import io.iguaz.v3io.container.DoInContainer
 import io.iguaz.v3io.kv.Filters.{Exists, GreaterThan, Not, Or}
 import io.iguaz.v3io.kv.{KeyValueOperations, OverwriteMode, UpdateEntry}
@@ -22,7 +25,10 @@ object Push {
     }
     DoInContainer(new Properties) { container =>
       val kvOps = KeyValueOperations(container)
-      kvOps.updateMultiple(updateEntryIterator)
+      val publisher = new SingleThreadedPublisher[UpdateEntry]
+      val updateFuture = kvOps.updateMultiple(publisher)
+      publisher.push(updateEntryIterator)
+      Await.result(updateFuture, Duration.Inf)
     }
   }
 }
