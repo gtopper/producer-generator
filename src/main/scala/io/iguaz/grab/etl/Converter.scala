@@ -10,9 +10,7 @@ object Converter {
 
   def apply(event: String): Row = {
     implicit val formats = org.json4s.DefaultFormats
-    val json = parse(event).extract[Map[String, JValue]]
-    val afterDataString = json("after_data").extract[String]
-    val afterData = parse(afterDataString).extract[Map[String, Map[String, String]]]
+    val afterData = parse(event).extract[Map[String, Map[String, String]]]
     val key = afterData("driver_id")("value")
     val newData = afterData.mapValues { field =>
       field("value") match {
@@ -23,7 +21,6 @@ object Converter {
             case "decimal" | "float" => other.toDouble
             case "string" | "date" => other
           }
-
       }
     }
 

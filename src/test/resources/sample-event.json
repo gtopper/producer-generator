@@ -1,9 +1,354 @@
 {
-  "owner": "abc",
-  "entity_name": "bookings",
-  "after_data": "{\"driver_id\":{\"value\":\"123\",\"type\":\"int\"},\"variable_pricing\":{\"value\":\"0\",\"type\":\"int\"},\"referrer_id\":{\"value\":\"\",\"type\":\"int\"},\"requested_taxi_type\":{\"value\":\"\",\"type\":\"string\"},\"passenger_id\":{\"value\":\"\",\"type\":\"int\"},\"driver_code\":{\"value\":\"\",\"type\":\"string\"},\"passenger_email\":{\"value\":\"\",\"type\":\"string\"},\"source\":{\"value\":\"VENUE\",\"type\":\"string\"},\"pick_up_time\":{\"value\":\"\",\"type\":\"date\"},\"customer_complete\":{\"value\":\"\",\"type\":\"int\"},\"fleet_phone_number\":{\"value\":\"\",\"type\":\"string\"},\"driver_service_provider_phone_number\":{\"value\":\"\",\"type\":\"string\"},\"pick_up_latitude\":{\"value\":\"\",\"type\":\"decimal\"},\"points\":{\"value\":\"0\",\"type\":\"int\"},\"advance\":{\"value\":\"0\",\"type\":\"int\"},\"route_information_source\":{\"value\":\"\",\"type\":\"string\"},\"requested_promotion_id\":{\"value\":\"\",\"type\":\"int\"},\"fleet_code\":{\"value\":\"\",\"type\":\"string\"},\"drop_off_latitude\":{\"value\":\"\",\"type\":\"decimal\"},\"tip\":{\"value\":\"0.0\",\"type\":\"decimal\"},\"state\":{\"value\":\"PENDING_NOMINATION\",\"type\":\"string\"},\"id\":{\"value\":\"\",\"type\":\"int\"},\"payment_type_id\":{\"value\":\"\",\"type\":\"string\"},\"eligibility_distance\":{\"value\":\"\",\"type\":\"int\"},\"driver_vehicle_plate_number\":{\"value\":\"\",\"type\":\"string\"},\"drop_off_address\":{\"value\":\"\",\"type\":\"string\"},\"close_time\":{\"value\":\"\",\"type\":\"date\"},\"dropped_off_time\":{\"value\":\"\",\"type\":\"date\"},\"pick_up_mask\":{\"value\":\"\",\"type\":\"string\"},\"picked_up_time\":{\"value\":\"\",\"type\":\"date\"},\"airport\":{\"value\":\"0\",\"type\":\"int\"},\"country_code\":{\"value\":\"\",\"type\":\"string\"},\"driver_distance\":{\"value\":\"\",\"type\":\"float\"},\"driver_longitude\":{\"value\":\"\",\"type\":\"decimal\"},\"user_id\":{\"value\":\"\",\"type\":\"int\"},\"driver_latitude\":{\"value\":\"\",\"type\":\"decimal\"},\"broadcast_time\":{\"value\":\"\",\"type\":\"date\"},\"metric_sort\":{\"value\":\"\",\"type\":\"string\"},\"country_id\":{\"value\":\"2\",\"type\":\"int\"},\"city_id\":{\"value\":\"4\",\"type\":\"int\"},\"pick_up_notes\":{\"value\":\"\",\"type\":\"string\"},\"passenger_review\":{\"value\":\"\",\"type\":\"string\"},\"code\":{\"value\":\"\",\"type\":\"string\"},\"taxi_type_id\":{\"value\":\"8\",\"type\":\"int\"},\"distance\":{\"value\":\"0.0\",\"type\":\"float\"},\"promotion_value\":{\"value\":\"0.0\",\"type\":\"decimal\"},\"recyclable\":{\"value\":\"0\",\"type\":\"int\"},\"user_name\":{\"value\":\"\",\"type\":\"string\"},\"pick_up_address\":{\"value\":\"\",\"type\":\"string\"},\"driver_points\":{\"value\":\"\",\"type\":\"int\"},\"created_at\":{\"value\":\"2017-11-07 09:16:32\",\"type\":\"date\"},\"promotion_id\":{\"value\":\"\",\"type\":\"int\"},\"recycling_nomination_strategy\":{\"value\":\"\",\"type\":\"string\"},\"confirmed_driver_notification_sent\":{\"value\":\"0\",\"type\":\"int\"},\"pick_up_keywords\":{\"value\":\"\",\"type\":\"string\"},\"duration\":{\"value\":\"0\",\"type\":\"int\"},\"driver_personal_phone_number\":{\"value\":\"\",\"type\":\"string\"},\"recycled\":{\"value\":\"0\",\"type\":\"int\"},\"updated_at\":{\"value\":\"2017-11-07 09:16:32\",\"type\":\"date\"},\"commission\":{\"value\":\"\",\"type\":\"decimal\"},\"passenger_phone_number\":{\"value\":\"\",\"type\":\"string\"},\"fleet_id\":{\"value\":\"\",\"type\":\"int\"},\"drop_off_longitude\":{\"value\":\"121.042791\",\"type\":\"decimal\"},\"fare_upper_bound\":{\"value\":\"0.0\",\"type\":\"decimal\"},\"drop_off_keywords\":{\"value\":\"\",\"type\":\"string\"},\"passenger_device_token\":{\"value\":\"\",\"type\":\"string\"},\"driver_arrived_notification_sent\":{\"value\":\"0\",\"type\":\"int\"},\"currency_symbol\":{\"value\":\"P\",\"type\":\"string\"},\"lock_version\":{\"value\":\"0\",\"type\":\"int\"},\"user_username\":{\"value\":\"\",\"type\":\"string\"},\"driver_email\":{\"value\":\"\",\"type\":\"string\"},\"pick_up_longitude\":{\"value\":\"\",\"type\":\"decimal\"},\"promotion_top_up_amount\":{\"value\":\"0.0\",\"type\":\"decimal\"},\"bidding_closed_at\":{\"value\":\"\",\"type\":\"date\"},\"driver_accuracy\":{\"value\":\"\",\"type\":\"float\"},\"passenger_name\":{\"value\":\"\",\"type\":\"string\"},\"confirm_time\":{\"value\":\"\",\"type\":\"date\"},\"surface_time\":{\"value\":\"\",\"type\":\"date\"},\"drop_off_notes\":{\"value\":\"\",\"type\":\"string\"},\"driver_name\":{\"value\":\"\",\"type\":\"string\"},\"fleet_name\":{\"value\":\"\",\"type\":\"string\"},\"metric\":{\"value\":\"\",\"type\":\"string\"},\"requested_promotion_code\":{\"value\":\"\",\"type\":\"string\"},\"nomination_strategy\":{\"value\":\"\",\"type\":\"string\"},\"fare_lower_bound\":{\"value\":\"0.0\",\"type\":\"decimal\"},\"advance_booking_notification_sent\":{\"value\":\"0\",\"type\":\"int\"},\"driver_taxi_type\":{\"value\":\"\",\"type\":\"string\"},\"remarks\":{\"value\":\"\",\"type\":\"string\"}}",
-  "before_data": "{}",
-  "created_at": 1510046192422,
-  "processed_at": 1510046192435,
-  "event_type": "INSERT"
+  "driver_id": {
+    "value": "123",
+    "type": "int"
+  },
+  "variable_pricing": {
+    "value": "0",
+    "type": "int"
+  },
+  "referrer_id": {
+    "value": "",
+    "type": "int"
+  },
+  "requested_taxi_type": {
+    "value": "",
+    "type": "string"
+  },
+  "passenger_id": {
+    "value": "",
+    "type": "int"
+  },
+  "driver_code": {
+    "value": "",
+    "type": "string"
+  },
+  "passenger_email": {
+    "value": "",
+    "type": "string"
+  },
+  "source": {
+    "value": "VENUE",
+    "type": "string"
+  },
+  "pick_up_time": {
+    "value": "",
+    "type": "date"
+  },
+  "customer_complete": {
+    "value": "",
+    "type": "int"
+  },
+  "fleet_phone_number": {
+    "value": "",
+    "type": "string"
+  },
+  "driver_service_provider_phone_number": {
+    "value": "",
+    "type": "string"
+  },
+  "pick_up_latitude": {
+    "value": "",
+    "type": "decimal"
+  },
+  "points": {
+    "value": "0",
+    "type": "int"
+  },
+  "advance": {
+    "value": "0",
+    "type": "int"
+  },
+  "route_information_source": {
+    "value": "",
+    "type": "string"
+  },
+  "requested_promotion_id": {
+    "value": "",
+    "type": "int"
+  },
+  "fleet_code": {
+    "value": "",
+    "type": "string"
+  },
+  "drop_off_latitude": {
+    "value": "",
+    "type": "decimal"
+  },
+  "tip": {
+    "value": "0.0",
+    "type": "decimal"
+  },
+  "state": {
+    "value": "PENDING_NOMINATION",
+    "type": "string"
+  },
+  "id": {
+    "value": "",
+    "type": "int"
+  },
+  "payment_type_id": {
+    "value": "",
+    "type": "string"
+  },
+  "eligibility_distance": {
+    "value": "",
+    "type": "int"
+  },
+  "driver_vehicle_plate_number": {
+    "value": "",
+    "type": "string"
+  },
+  "drop_off_address": {
+    "value": "",
+    "type": "string"
+  },
+  "close_time": {
+    "value": "",
+    "type": "date"
+  },
+  "dropped_off_time": {
+    "value": "",
+    "type": "date"
+  },
+  "pick_up_mask": {
+    "value": "",
+    "type": "string"
+  },
+  "picked_up_time": {
+    "value": "",
+    "type": "date"
+  },
+  "airport": {
+    "value": "0",
+    "type": "int"
+  },
+  "country_code": {
+    "value": "",
+    "type": "string"
+  },
+  "driver_distance": {
+    "value": "",
+    "type": "float"
+  },
+  "driver_longitude": {
+    "value": "",
+    "type": "decimal"
+  },
+  "user_id": {
+    "value": "",
+    "type": "int"
+  },
+  "driver_latitude": {
+    "value": "",
+    "type": "decimal"
+  },
+  "broadcast_time": {
+    "value": "",
+    "type": "date"
+  },
+  "metric_sort": {
+    "value": "",
+    "type": "string"
+  },
+  "country_id": {
+    "value": "2",
+    "type": "int"
+  },
+  "city_id": {
+    "value": "4",
+    "type": "int"
+  },
+  "pick_up_notes": {
+    "value": "",
+    "type": "string"
+  },
+  "passenger_review": {
+    "value": "",
+    "type": "string"
+  },
+  "code": {
+    "value": "",
+    "type": "string"
+  },
+  "taxi_type_id": {
+    "value": "8",
+    "type": "int"
+  },
+  "distance": {
+    "value": "0.0",
+    "type": "float"
+  },
+  "promotion_value": {
+    "value": "0.0",
+    "type": "decimal"
+  },
+  "recyclable": {
+    "value": "0",
+    "type": "int"
+  },
+  "user_name": {
+    "value": "",
+    "type": "string"
+  },
+  "pick_up_address": {
+    "value": "",
+    "type": "string"
+  },
+  "driver_points": {
+    "value": "",
+    "type": "int"
+  },
+  "created_at": {
+    "value": "2017-11-07 09:16:32",
+    "type": "date"
+  },
+  "promotion_id": {
+    "value": "",
+    "type": "int"
+  },
+  "recycling_nomination_strategy": {
+    "value": "",
+    "type": "string"
+  },
+  "confirmed_driver_notification_sent": {
+    "value": "0",
+    "type": "int"
+  },
+  "pick_up_keywords": {
+    "value": "",
+    "type": "string"
+  },
+  "duration": {
+    "value": "0",
+    "type": "int"
+  },
+  "driver_personal_phone_number": {
+    "value": "",
+    "type": "string"
+  },
+  "recycled": {
+    "value": "0",
+    "type": "int"
+  },
+  "updated_at": {
+    "value": "2017-11-07 09:16:32",
+    "type": "date"
+  },
+  "commission": {
+    "value": "",
+    "type": "decimal"
+  },
+  "passenger_phone_number": {
+    "value": "",
+    "type": "string"
+  },
+  "fleet_id": {
+    "value": "",
+    "type": "int"
+  },
+  "drop_off_longitude": {
+    "value": "121.042791",
+    "type": "decimal"
+  },
+  "fare_upper_bound": {
+    "value": "0.0",
+    "type": "decimal"
+  },
+  "drop_off_keywords": {
+    "value": "",
+    "type": "string"
+  },
+  "passenger_device_token": {
+    "value": "",
+    "type": "string"
+  },
+  "driver_arrived_notification_sent": {
+    "value": "0",
+    "type": "int"
+  },
+  "currency_symbol": {
+    "value": "P",
+    "type": "string"
+  },
+  "lock_version": {
+    "value": "0",
+    "type": "int"
+  },
+  "user_username": {
+    "value": "",
+    "type": "string"
+  },
+  "driver_email": {
+    "value": "",
+    "type": "string"
+  },
+  "pick_up_longitude": {
+    "value": "",
+    "type": "decimal"
+  },
+  "promotion_top_up_amount": {
+    "value": "0.0",
+    "type": "decimal"
+  },
+  "bidding_closed_at": {
+    "value": "",
+    "type": "date"
+  },
+  "driver_accuracy": {
+    "value": "",
+    "type": "float"
+  },
+  "passenger_name": {
+    "value": "",
+    "type": "string"
+  },
+  "confirm_time": {
+    "value": "",
+    "type": "date"
+  },
+  "surface_time": {
+    "value": "",
+    "type": "date"
+  },
+  "drop_off_notes": {
+    "value": "",
+    "type": "string"
+  },
+  "driver_name": {
+    "value": "",
+    "type": "string"
+  },
+  "fleet_name": {
+    "value": "",
+    "type": "string"
+  },
+  "metric": {
+    "value": "",
+    "type": "string"
+  },
+  "requested_promotion_code": {
+    "value": "",
+    "type": "string"
+  },
+  "nomination_strategy": {
+    "value": "",
+    "type": "string"
+  },
+  "fare_lower_bound": {
+    "value": "0.0",
+    "type": "decimal"
+  },
+  "advance_booking_notification_sent": {
+    "value": "0",
+    "type": "int"
+  },
+  "driver_taxi_type": {
+    "value": "",
+    "type": "string"
+  },
+  "remarks": {
+    "value": "",
+    "type": "string"
+  }
 }
