@@ -11,7 +11,7 @@ object Converter {
   def apply(event: String): Row = {
     implicit val formats = org.json4s.DefaultFormats
     val afterData = parse(event).extract[Map[String, Map[String, String]]]
-    val key = afterData("driver_id")("value")
+    val key = afterData(keyField)("value")
     val newData = afterData.mapValues { field =>
       field("value") match {
         case "" => null
