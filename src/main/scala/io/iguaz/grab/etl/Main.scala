@@ -12,7 +12,7 @@ object Main {
 
     val inputPaths = args
 
-    val df = spark.read.load(inputPaths: _*).select("after_data").map(_.getAs[String]("after_data"))
+    val df = spark.read.json(inputPaths: _*).select("after_data").map(_.getAs[String]("after_data"))
     df.foreachPartition(Push(_))
   }
 }
