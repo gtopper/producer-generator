@@ -17,9 +17,9 @@ object Converter {
         case "" => null
         case other =>
           field("type") match {
-            case "int" => other.toInt
+            case "int" | "bigInt" => other.toLong
             case "decimal" | "float" => other.toDouble
-            case "string" | "date" => other
+            case _ => other
           }
       }
     }

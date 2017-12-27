@@ -25,9 +25,7 @@ object Push {
     }
     DoInContainer(new Properties) { container =>
       val kvOps = KeyValueOperations(container)
-      val publisher = new SingleThreadedPublisher[UpdateEntry]
-      val updateFuture = kvOps.updateMultiple(publisher)
-      publisher.push(updateEntryIterator)
+      val updateFuture = kvOps.updateMultiple(updateEntryIterator)
       Await.result(updateFuture, Duration.Inf)
     }
   }
