@@ -1,0 +1,42 @@
+{
+  "key": {
+    "name": "driverId",
+    "type": "integer"
+  },
+  "time-field": {
+    "name": "updated_at",
+    "type": "time"
+  },
+  "columns": [
+    {
+      "name": "string-1",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "string-2",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "nullable-string-1",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "nullable-string-2",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "integer-1",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "nullable-integer-1",
+      "type": "string",
+      "nullable": true
+    }
+  ]
+}

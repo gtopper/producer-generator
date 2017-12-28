@@ -1,18 +1,23 @@
 package io.iguaz.grab.etl
 
-import org.apache.spark.sql.SparkSession
+import java.util.Properties
+
+import scala.concurrent.Await
+import scala.concurrent.duration.Duration
+
+import io.iguaz.v3io.container.DoInContainer
+import io.iguaz.v3io.kv.KeyValueOperations
 
 object Main {
 
-  private val spark = SparkSession.builder().appName("Grab ETL").getOrCreate()
-
-  import spark.implicits._
-
   def main(args: Array[String]): Unit = {
-
-    val inputPaths = args
-
-    val df = spark.read.json(inputPaths: _*).select("after_data").map(_.getAs[String]("after_data"))
-    df.foreachPartition(Push(_))
+    val schema = GeneratorSchema.fromResource("/schema.json")
+    val updateEntryIterator = Iterator.continually(Generator.generate(schema))
+    updateEntryIterator.foreach(println)
+    DoInContainer(new Properties) { container =>
+      val kvOps = KeyValueOperations(container)
+      val updateFuture = kvOps.updateMultiple(updateEntryIterator)
+      Await.result(updateFuture, Duration.Inf)
+    }
   }
 }
