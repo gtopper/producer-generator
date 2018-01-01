@@ -39,7 +39,7 @@ object Generator {
 
     val otherFields: Map[String, Any] = generatorSchema.columns.flatMap {
       case GeneratorField(name, t, nullable) =>
-        if (!nullable | random.nextBoolean()) Some(name -> generateString()) else None
+        if (!nullable | random.nextBoolean()) Some(name -> generateFromType(t)) else None
     }(breakOut)
 
     val key = generateFromType(generatorSchema.key.`type`)
