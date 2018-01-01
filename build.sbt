@@ -1,4 +1,4 @@
-name := "grab-etl-v3io"
+name := "grab-generator-producer"
 
 organization := "io.iguaz"
 
@@ -9,3 +9,10 @@ scalaVersion := "2.11.12"
 scalacOptions += "-target:jvm-1.7"
 
 libraryDependencies += "org.json4s" %% "json4s-jackson" % "3.2.11"
+
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
+
+assemblyExcludedJars in assembly := {
+  val cp = (fullClasspath in assembly).value
+  cp.filter(_.data.getName.contains("v3io"))
+}

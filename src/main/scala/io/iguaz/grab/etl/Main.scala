@@ -10,8 +10,7 @@ object Main {
 
   def main(args: Array[String]): Unit = {
     val schema = GeneratorSchema.fromResource("/schema.json")
-    val updateEntryIterator = Iterator.continually(Generator.generate(schema))
-    //  updateEntryIterator.foreach(println)
+    val updateEntryIterator = PrintPeriodIterator.create().map(_ => Generator.generate(schema))
     val kvOps = KeyValueOperations(ContainerID(1), Map.empty[String, Any])
     val updateFuture = kvOps.updateMultiple(updateEntryIterator)
     Await.result(updateFuture, Duration.Inf)
