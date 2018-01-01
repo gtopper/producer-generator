@@ -18,7 +18,9 @@ object Generator {
 
   private val random = new Random()
 
-  private def generateString(): String = random.nextInt().toBinaryString.map {
+  private val valueDomainSize = sys.props.getOrElse("value-domain-size", "10000").toInt
+
+  private def generateString(): String = random.nextInt(valueDomainSize).toBinaryString.map {
     case '0' => 'X'
     case '1' => 'Y'
   }
@@ -29,7 +31,7 @@ object Generator {
 
   private def generateFromType(generatorType: String): Any = generatorType match {
     case "string" => generateString()
-    case "integer" => random.nextLong()
+    case "integer" => random.nextInt(valueDomainSize)
     case "time" => nowTimestamp()
   }
 
