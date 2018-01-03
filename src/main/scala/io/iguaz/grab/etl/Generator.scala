@@ -9,7 +9,7 @@ import scala.collection.breakOut
 import com.fasterxml.jackson.databind.util.ISO8601DateFormat
 
 import io.iguaz.grab.etl.Configuration.table
-import io.iguaz.v3io.kv.Filters.{Exists, GreaterThan, Not, Or}
+import io.iguaz.v3io.kv.Filters._
 import io.iguaz.v3io.kv.{OverwriteMode, SimpleRow, UpdateEntry}
 
 object Generator {
@@ -56,7 +56,7 @@ object Generator {
       Paths.get(table),
       row,
       OverwriteMode.OVERWRITE,
-      Or(Not(Exists(generatorSchema.`time-field`.name)), GreaterThan(generatorSchema.`time-field`.name, timestamp))
+      Or(Not(Exists(generatorSchema.`time-field`.name)), LessThanOrEqual(generatorSchema.`time-field`.name, timestamp))
     )
   }
 }
