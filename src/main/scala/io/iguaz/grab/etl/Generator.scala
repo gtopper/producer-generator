@@ -18,7 +18,7 @@ object Generator {
 
   private val random = new Random()
 
-  private val valueDomainSize = sys.props.getOrElse("value-domain-size", "10000").toInt
+  private val valueDomainSize = sys.props.getOrElse("value-domain-size", "1000000").toInt
 
   private def generateString(): String = random.nextInt(valueDomainSize).toBinaryString.map {
     case '0' => 'X'
