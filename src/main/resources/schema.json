@@ -9,32 +9,152 @@
   },
   "columns": [
     {
-      "name": "string-1",
+      "name": "string-11",
       "type": "string",
       "nullable": false
     },
     {
-      "name": "string-2",
+      "name": "string-12",
       "type": "string",
       "nullable": false
     },
     {
-      "name": "nullable-string-1",
+      "name": "nullable-string-11",
       "type": "string",
       "nullable": true
     },
     {
-      "name": "nullable-string-2",
+      "name": "nullable-string-12",
       "type": "string",
       "nullable": true
     },
     {
-      "name": "integer-1",
+      "name": "integer-11",
       "type": "integer",
       "nullable": false
     },
     {
-      "name": "nullable-integer-1",
+      "name": "nullable-integer-11",
+      "type": "integer",
+      "nullable": true
+    },
+    {
+      "name": "string-21",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "string-22",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "nullable-string-21",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "nullable-string-22",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "integer-21",
+      "type": "integer",
+      "nullable": false
+    },
+    {
+      "name": "nullable-integer-21",
+      "type": "integer",
+      "nullable": true
+    },
+    {
+      "name": "string-31",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "string-32",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "nullable-string-31",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "nullable-string-32",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "integer-31",
+      "type": "integer",
+      "nullable": false
+    },
+    {
+      "name": "nullable-integer-31",
+      "type": "integer",
+      "nullable": true
+    },
+    {
+      "name": "string-41",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "string-42",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "nullable-string-41",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "nullable-string-42",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "integer-41",
+      "type": "integer",
+      "nullable": false
+    },
+    {
+      "name": "nullable-integer-41",
+      "type": "integer",
+      "nullable": true
+    },
+    {
+      "name": "string-51",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "string-52",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "nullable-string-51",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "nullable-string-52",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "integer-51",
+      "type": "integer",
+      "nullable": false
+    },
+    {
+      "name": "nullable-integer-51",
       "type": "integer",
       "nullable": true
     }
