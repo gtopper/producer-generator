@@ -1,10 +1,15 @@
 package io.iguaz.grab.etl
 
+import java.text.NumberFormat
+import java.util.Locale
+
 import com.typesafe.scalalogging.LazyLogging
 
 object PrintPeriodIterator extends LazyLogging {
 
-  val printPeriod = sys.props.getOrElse("print-period", "5000").toInt
+  private val numberFormat = NumberFormat.getIntegerInstance(Locale.US)
+
+  private val printPeriod = sys.props.getOrElse("print-period", "5000").toInt
 
   def create(): Iterator[Unit] = {
     val start = System.currentTimeMillis()
@@ -13,11 +18,14 @@ object PrintPeriodIterator extends LazyLogging {
     Iterator.from(1).map { count =>
       val cycleStart = System.currentTimeMillis()
       if (cycleStart >= lastCycleStart + printPeriod) {
-        val secondPassed = (cycleStart - start) / 1000
         val millisSinceLastCycle = cycleStart - lastCycleStart
         val progress = count - lastCount
+        val secondPassed = (cycleStart - start) / 1000L
+        val secondPassedStr = numberFormat.format(secondPassed)
         val secondsRate = progress * 1000L / millisSinceLastCycle
-        logger.info(s"[$secondsRate/sec] $count entries written after $secondPassed seconds...")
+        val secondsRateStr = numberFormat.format(secondsRate)
+        val countStr = numberFormat.format(count)
+        logger.info(s"[$secondsRateStr/s] $countStr entries written after $secondPassedStr seconds...")
         lastCycleStart = cycleStart
         lastCount = count
       }
