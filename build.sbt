@@ -12,6 +12,8 @@ libraryDependencies += "org.json4s" %% "json4s-jackson" % "3.2.11"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 
+libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.7.2"
+
 assemblyExcludedJars in assembly := {
   val cp = (fullClasspath in assembly).value
   cp.filter(_.data.getName.contains("v3io"))
