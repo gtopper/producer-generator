@@ -40,21 +40,22 @@ object Generator {
         if (!nullable | random.nextBoolean()) Some(name -> generateFromType(t, timestamp)) else None
     }(breakOut)
 
+    val timeFields = List(
+      "year" -> now.getYear,
+      "month" -> now.getMonthOfYear,
+      "day" -> now.getDayOfMonth,
+      "hour" -> now.getHourOfDay
+    )
     val key = generateFromType(generatorSchema.key.`type`, timestamp)
     val row = SimpleRow(
       key.toString,
       otherFields ++ List(
         generatorSchema.key.name -> key,
         generatorSchema.`time-field`.name -> timestamp
-      )
+      ) ++ timeFields
     )
 
-    val subdirs = List(
-      s"year=${now.getYear}",
-      s"month=${now.getMonthOfYear}",
-      s"day=${now.getDayOfMonth}",
-      s"hour=${now.getHourOfDay}"
-    )
+    val subdirs = timeFields.map { case (name, value) => s"$name=$value" }
     val path = Paths.get(table, subdirs: _*)
 
     UpdateEntry(
