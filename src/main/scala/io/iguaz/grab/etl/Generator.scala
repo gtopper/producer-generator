@@ -22,10 +22,7 @@ object Generator {
 
   private val dateTimeFormatter = ISODateTimeFormat.dateTimeNoMillis()
 
-  private def generateString(): String = random.nextInt(valueDomainSize).toBinaryString.map {
-    case '0' => 'X'
-    case '1' => 'Y'
-  }
+  private def generateString(): String = random.nextInt(valueDomainSize).toBinaryString
 
   private def generateFromType(generatorType: String, timestamp: String): Any = generatorType match {
     case "string" => generateString()
