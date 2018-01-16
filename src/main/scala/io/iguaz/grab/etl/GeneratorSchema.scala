@@ -2,9 +2,23 @@ package io.iguaz.grab.etl
 
 import scala.io.Source
 
-import org.json4s.jackson.JsonMethods.parse
+import org.json4s._
+import org.json4s.jackson.JsonMethods.{compact, parse}
 
-case class GeneratorSchema(key: GeneratorField, `time-field`: GeneratorField, columns: List[GeneratorField])
+case class GeneratorSchema(key: GeneratorField, `time-field`: GeneratorField, columns: List[GeneratorField]) {
+
+  def toIguazioSchema: String = {
+    compact(JObject("fields" ->
+      JArray((key :: `time-field` :: columns).map {
+        case GeneratorField(name, t, nullable) => JObject(
+          "name" -> JString(name),
+          "type" -> JString(t),
+          "nullable" -> JBool(nullable)
+        )
+      })
+    ))
+  }
+}
 
 object GeneratorSchema {
 
