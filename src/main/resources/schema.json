@@ -1,11 +1,11 @@
 {
   "key": {
     "name": "driverId",
-    "type": "integer"
+    "type": "long"
   },
   "time-field": {
     "name": "updated_at",
-    "type": "time"
+    "type": "string"
   },
   "columns": [
     {
@@ -29,13 +29,13 @@
       "nullable": true
     },
     {
-      "name": "integer-11",
-      "type": "integer",
+      "name": "long-11",
+      "type": "long",
       "nullable": false
     },
     {
-      "name": "nullable-integer-11",
-      "type": "integer",
+      "name": "nullable-long-11",
+      "type": "long",
       "nullable": true
     },
     {
@@ -59,13 +59,13 @@
       "nullable": true
     },
     {
-      "name": "integer-21",
-      "type": "integer",
+      "name": "long-21",
+      "type": "long",
       "nullable": false
     },
     {
-      "name": "nullable-integer-21",
-      "type": "integer",
+      "name": "nullable-long-21",
+      "type": "long",
       "nullable": true
     },
     {
@@ -89,13 +89,13 @@
       "nullable": true
     },
     {
-      "name": "integer-31",
-      "type": "integer",
+      "name": "long-31",
+      "type": "long",
       "nullable": false
     },
     {
-      "name": "nullable-integer-31",
-      "type": "integer",
+      "name": "nullable-long-31",
+      "type": "long",
       "nullable": true
     },
     {
@@ -119,13 +119,13 @@
       "nullable": true
     },
     {
-      "name": "integer-41",
-      "type": "integer",
+      "name": "long-41",
+      "type": "long",
       "nullable": false
     },
     {
-      "name": "nullable-integer-41",
-      "type": "integer",
+      "name": "nullable-long-41",
+      "type": "long",
       "nullable": true
     },
     {
@@ -149,13 +149,13 @@
       "nullable": true
     },
     {
-      "name": "integer-51",
-      "type": "integer",
+      "name": "long-51",
+      "type": "long",
       "nullable": false
     },
     {
-      "name": "nullable-integer-51",
-      "type": "integer",
+      "name": "nullable-long-51",
+      "type": "long",
       "nullable": true
     }
   ]
